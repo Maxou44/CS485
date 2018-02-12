@@ -13,14 +13,17 @@ public class Baby : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update()
-	{	
+	{		
 		// Move baby
 		Move();
 		
 		// End of level
 		if (transform.position.x > 6)
 		{
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			if (SceneManager.GetActiveScene().buildIndex >= 4)
+				SceneManager.LoadScene(0);
+			else
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 		
 	}
