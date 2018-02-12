@@ -1,0 +1,33 @@
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
+
+public class Baby : MonoBehaviour
+{	
+	public float speed = 8f;
+
+	// Use this for initialization
+	void Start()
+	{
+	}
+	
+	// Update is called once per frame
+	void Update()
+	{	
+		// Move baby
+		Move();
+		
+		// End of level
+		if (transform.position.x > 6)
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		}
+		
+	}
+
+    // Move the baby
+	void Move()
+	{
+		transform.Translate(speed * Time.deltaTime, 0, 0);
+	}
+}
