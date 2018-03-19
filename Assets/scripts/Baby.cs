@@ -20,10 +20,7 @@ public class Baby : MonoBehaviour
 		// End of level
 		if (transform.position.x > 6)
 		{
-			if (SceneManager.GetActiveScene().buildIndex >= 4)
-				SceneManager.LoadScene(0);
-			else
-				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 		
 	}

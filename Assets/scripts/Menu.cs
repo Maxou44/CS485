@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Menu : MonoBehaviour {
@@ -18,13 +19,13 @@ public class Menu : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		if (GUI.Button(new Rect(origin_x, origin_y, buttonWidth, buttonHeight), "Roll-a-ball tutorial"))
+		if (GUI.Button(new Rect(origin_x, origin_y, buttonWidth, buttonHeight), "Level 1"))
 		{
-			Application.LoadLevel(1);
+            SceneManager.LoadScene(1);
 		}
-		if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight + 10, buttonWidth, buttonHeight), "The Londonner Dad"))
+		if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight + 10, buttonWidth, buttonHeight), "Level 2"))
 		{
-			Application.LoadLevel(2);
+            SceneManager.LoadScene(2);
 		}
 		if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 2 + 30, buttonWidth, buttonHeight), "Exit"))
 		{
